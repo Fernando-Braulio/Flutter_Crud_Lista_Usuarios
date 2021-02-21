@@ -3,13 +3,13 @@
 ## App Desenvolvido no curso de Daniel Ciolfo Usando Provider
 
 ##### Tela Inicial do App Listando os Usuários 
-![Tela inicial](https://github.com/Fernando-Braulio/Flutter_Crud_Lista_Usuarios/blob/master/assets/printers/TelaInicial.png)
+![Tela inicial](https://github.com/Fernando-Braulio/Flutter_Crud_Lista_Usuarios/blob/main/assets/printers/TelaInicial.png)
 
 ##### Tela de formulario do App para inserir um novo ou alterar o usuário
-![Tela inicial](https://github.com/Fernando-Braulio/Flutter_Crud_Lista_Usuarios/blob/master/assets/printers/TelaFormulario.png)
+![Tela inicial](https://github.com/Fernando-Braulio/Flutter_Crud_Lista_Usuarios/blob/main/assets/printers/TelaFormulario.png)
 
 ##### Modal para excluir usuário
-![Tela inicial](https://github.com/Fernando-Braulio/Flutter_Crud_Lista_Usuarios/blob/master/assets/printers/ExcluindoUsuario.png)
+![Tela inicial](https://github.com/Fernando-Braulio/Flutter_Crud_Lista_Usuarios/blob/main/assets/printers/ExcluindoUsuario.png)
 
 ## Getting Started
 
