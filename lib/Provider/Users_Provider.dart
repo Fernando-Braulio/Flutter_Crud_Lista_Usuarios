@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_crud_lista_usuario/Data/Dummy_Users.dart';
 import 'package:flutter_crud_lista_usuario/Models/User.dart';
@@ -15,5 +17,37 @@ class UsersProvider with ChangeNotifier {
 
   User byIndex(int i) {
     return _items.values.elementAt(i);
+  }
+
+  void put(User user) {
+    if (user == null) {
+      return;
+    }
+
+    if (user.id != null &&
+        user.id.trim().isNotEmpty &&
+        _items.containsKey(user.id)) {
+      _items.update(user.id, (_) => user);
+    } else {
+      final id = Random().nextDouble().toString();
+      _items.putIfAbsent(
+        id,
+        () => User(
+          id: id,
+          name: user.name,
+          email: user.email,
+          avatarUrl: user.avatarUrl,
+        ),
+      );
+    }
+
+    notifyListeners();
+  }
+
+  void remove(User user) {
+    if (user != null && user.id != null) {
+      _items.remove(user.id);
+      notifyListeners();
+    }
   }
 }
