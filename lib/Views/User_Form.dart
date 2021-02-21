@@ -3,8 +3,14 @@ import 'package:flutter_crud_lista_usuario/Models/User.dart';
 import 'package:flutter_crud_lista_usuario/Provider/Users_Provider.dart';
 import 'package:provider/provider.dart';
 
-class UserForm extends StatelessWidget {
+class UserForm extends StatefulWidget {
+  @override
+  _UserFormState createState() => _UserFormState();
+}
+
+class _UserFormState extends State<UserForm> {
   final _form = GlobalKey<FormState>();
+
   final Map<String, String> _formData = {};
 
   void _loadFormData(User user) {
@@ -17,12 +23,16 @@ class UserForm extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  void didChangeDependencies() {
+    super.didChangeDependencies();
     final User user = ModalRoute.of(context)
         .settings
         .arguments; //PEGANDO OS DADOS QUE FORA ENVIADOS VIA ROTA
     _loadFormData(user);
+  }
 
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Formulario de Usuario'),
